@@ -34,7 +34,7 @@ namespace Producer
                     IDatabase db = redis.GetDatabase();
                     db.ListLeftPush("DataMessages", jsonMessage, When.Always, CommandFlags.HighPriority);
 
-        //            Thread.Sleep(10);
+                    Thread.Sleep(10);
                 }
             },src.Token);
 
